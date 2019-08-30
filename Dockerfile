@@ -1,7 +1,8 @@
 FROM i386/golang:1.12.9-buster as gobuild
-ENV VERSION 2.12.0
+ARG PROMETHEUS_VERSION=2.12.0
+ENV DOCKER_TAG ${PROMETHEUS_VERSION}
 WORKDIR ${GOPATH}/src
-RUN git clone http://github.com/prometheus/prometheus.git --single-branch --branch v${VERSION} --depth=1
+RUN git clone http://github.com/prometheus/prometheus.git --single-branch --branch v${PROMETHEUS_VERSION} --depth=1
 WORKDIR ${GOPATH}/src/prometheus
 RUN make build
 FROM i386/alpine
