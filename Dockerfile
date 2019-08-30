@@ -7,8 +7,8 @@ WORKDIR ${GOPATH}/src/prometheus
 RUN make build
 FROM i386/alpine
 ENV USER prometheus
-ENV UID 1000
-ENV GID 1000
+ENV UID 9090
+ENV GID 9090
 RUN addgroup --gid "${GID}" "${USER}" \
     && adduser \
     --disabled-password \
