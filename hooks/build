@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+if [ "$DOCKER_TAG" = "latest" ]; then
+  docker build --build-arg VERSION_ARG="master" -t ${IMAGE_NAME} .
+else
+  docker build --build-arg VERSION_ARG="$DOCKER_TAG" -t ${IMAGE_NAME} .
+fi
