@@ -23,5 +23,4 @@ COPY --from=gobuild /go/src/prometheus/documentation/examples/prometheus.yml /pr
 RUN mkdir /data && chown -R ${UID}:${GID} /data
 USER ${UID}:${GID}
 EXPOSE 9090
-ENTRYPOINT [ "/prometheus/prometheus"] 
-CMD ["--config.file=/prometheus/prometheus.yml"]
+ENTRYPOINT [ "/prometheus/prometheus", "--config.file=/prometheus/prometheus.yml"] 
