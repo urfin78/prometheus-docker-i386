@@ -1,7 +1,12 @@
 # prometheus-docker-i386
-[![dockerhub build status](https://img.shields.io/docker/cloud/build/urfin78/prometheus-i386.svg)](https://hub.docker.com/r/urfin78/prometheus-i386/)
+This repo is not maintained anymore.
 
-Build prometheus docker container for i386 systems
+If you want to use the my Docker Images for i386 systems, please use the multiarch build from here:  
+https://github.com/urfin78/docker-prometheus
+
+You can find the new images at this dockerhub repository:  
+https://hub.docker.com/r/urfin78/prometheus
+
 
 ## License
 This code is distributed under GPL v3.0 License:
